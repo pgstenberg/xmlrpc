@@ -21,7 +21,6 @@ public class XmlRpcConnection {
 	
 	public <T extends XmlRpcRespond> T sendRequest(XmlRpcRequest request,T respond) throws XmlRpcException, InstantiationException, IllegalAccessException{	
 		try{
-			
 			respond.processRespond(connection.execute(request.methodName(), request.toArray()));
 			
 		}catch(org.apache.xmlrpc.XmlRpcException e){
