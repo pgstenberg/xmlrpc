@@ -21,9 +21,13 @@ public class XmlRpcConnection {
 	
 	public <T extends XmlRpcRespond> T sendRequest(XmlRpcRequest request,T respond) throws XmlRpcException, InstantiationException, IllegalAccessException{	
 		try{
-			respond.processRespond(connection.execute(request.methodName(), request.toArray()));
+			Object respondData = connection.execute(request.methodName(), request.toArray());
+			
+			
+			respond.processRespond(respondData);
 			
 		}catch(org.apache.xmlrpc.XmlRpcException e){
+			e.printStackTrace();
 			throw new XmlRpcException(e);
 		}
 		return respond;
@@ -37,10 +41,11 @@ public class XmlRpcConnection {
 	public boolean connect() throws MalformedURLException{
 		connection = new XmlRpcClient(); 
 		XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
+		config.setBasicEncoding(XmlRpcClientConfigImpl.UTF8_ENCODING);
 		config.setServerURL(new URL(connectionUrl));
 		connection.setTypeFactory(new XmlRpcTypeNil(connection));
 		connection.setConfig(config);	
-		
+	
 		return true;
 	}
 }
