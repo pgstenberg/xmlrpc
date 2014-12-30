@@ -1,4 +1,4 @@
-package se.stonepath.framework.rpcxml;
+package se.stonepath.framework.xmlrpc;
 
 import java.net.MalformedURLException;
 import java.net.URL;

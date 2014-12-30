@@ -1,4 +1,4 @@
-package se.stonepath.framework.rpcxml;
+package se.stonepath.framework.xmlrpc;
 
 public interface XmlRpcRespond {
 

@@ -1,6 +1,6 @@
-package se.stonepath.framework.rpcxml.respond.value;
+package se.stonepath.framework.xmlrpc.respond.value;
 
-import se.stonepath.framework.rpcxml.respond.XmlRpcValueRespond;
+import se.stonepath.framework.xmlrpc.respond.XmlRpcValueRespond;
 
 public class XmlRpcStringRespond extends XmlRpcValueRespond<String>{
 

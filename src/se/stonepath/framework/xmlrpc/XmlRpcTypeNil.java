@@ -1,4 +1,4 @@
-package se.stonepath.framework.rpcxml;
+package se.stonepath.framework.xmlrpc;
 
 import org.apache.ws.commons.util.NamespaceContextImpl;
 import org.apache.xmlrpc.common.TypeFactoryImpl;

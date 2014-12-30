@@ -1,4 +1,4 @@
-package se.stonepath.framework.rpcxml;
+package se.stonepath.framework.xmlrpc;
 
 
 public class XmlRpcException extends Exception{
