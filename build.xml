@@ -1,4 +1,4 @@
-<project name="stonepath-framework-rpcxml" default="release" basedir=".">
+<project name="stonepath-framework-xmlrpc" default="release" basedir=".">
 
   <!-- set global properties for this build -->
   <property name="src" location="src"/>
