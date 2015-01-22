@@ -8,8 +8,6 @@ import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 
 
 
-
-
 public class XmlRpcConnection {
 
 	private XmlRpcClient connection;
@@ -23,7 +21,6 @@ public class XmlRpcConnection {
 	public <T extends XmlRpcRespond> T sendRequest(XmlRpcRequest request,T respond) throws XmlRpcException, InstantiationException, IllegalAccessException{	
 		try{
 			
-
 			Object respondData = connection.execute(request.getMethodName(),request);
 				
 			respond.processRespond(respondData);		
